@@ -10,25 +10,25 @@ string Range (int b)
 
     if (b==1)
     {
-        maxValueX = 1.7 * Math.Pow(10, 308);
-        maxValueY = 1.7 * Math.Pow(10, 308);
+        maxValueX = double.MaxValue;
+        maxValueY = double.MaxValue;
     }
     if (b==2)
     {
-        minValueX = -1.7 * Math.Pow(10, 308);
-        maxValueY=1.7 * Math.Pow(10, 308);
+        minValueX = -double.MaxValue;
+        maxValueY=double.MaxValue;
     }
     if (b==3)
     {
-        minValueX = -1.7 * Math.Pow(10, 308);
-        minValueY = -1.7 * Math.Pow(10, 308);
+        minValueX = -double.MaxValue;
+        minValueY = -double.MaxValue;
     }
     if(b==4)
     {
-        maxValueX = 1.7 * Math.Pow(10, 308);
-        minValueY = -1.7 * Math.Pow(10, 308);
+        maxValueX = double.MaxValue;
+        minValueY = double.MaxValue;
     }
-    range = range + $"Диапазон по Х ({minValueX} - {maxValueX}), диапазон по Y ({minValueY} - {maxValueY})";
+    range = range + $"Диапазон по Х ({minValueX}; {maxValueX}), диапазон по Y ({minValueY}; {maxValueY})";
     return range;
 }
-Console.WriteLine($"Диапазон возможных координат для {b} четверти: {Range(b)}");
+Console.WriteLine($"Диапазон для {b} четверти: {Range(b)}");

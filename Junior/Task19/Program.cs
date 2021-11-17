@@ -3,17 +3,12 @@ double X = new Random().Next(-1000, 1000);
 double Y = new Random().Next(-1000, 1000);
 string Quarter(double x, double y)
 {
-    string result = "";
-    if (x != 0 && y != 0)
+    string result = string.Empty;
     {
-        if (x > 0 && y > 0)  result = result + "Точка с координатами" + x + y + "в 1 четверти";
-        if (x < 0 && y > 0)  result = result + "Точка с координатами" + x + y + "во 2 четверти";
-        if (x < 0 && y < 0)  result = result + "Точка с координатами" + x + y + "в 3 четверти";
-        if (x > 0 && y < 0)  result = result + "Точка с координатами" + x + y + "в 4 четверти";
-    }
-    else
-    {
-        result = result + "Точка с координатами" + x + y + "на оси";
+        if (x > 0 && y > 0)  result = result + $"Точка с координатами {x}, {y} в 1 четверти";
+        if (x < 0 && y > 0)  result = result + $"Точка с координатами {x}, {y} во 2 четверти";
+        if (x < 0 && y < 0)  result = result + $"Точка с координатами {x}, {y} в 3 четверти";
+        if (x > 0 && y < 0)  result = result + $"Точка с координатами {x}, {y} в 4 четверти";
     }
     return result;
 }
