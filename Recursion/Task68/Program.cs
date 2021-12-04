@@ -5,9 +5,8 @@ string ShowNumbers(int m, int n)
     else
     {
         if (m > n) return $"{m} {ShowNumbers(m - 1, n)}";
-        if (m < n) return $"{m} {ShowNumbers(m + 1, n)}";
+        else return $"{m} {ShowNumbers(m + 1, n)}";
     }
-    return $"{ShowNumbers(m,n)}";
 }
 System.Console.WriteLine("Введите число M");
 int M = Convert.ToInt32(Console.ReadLine());
