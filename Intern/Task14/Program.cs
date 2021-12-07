@@ -1,7 +1,6 @@
 ﻿// 14. Найти третью цифру числа или сообщить, что её нет
 
-// Александр Сибирко
-string FindThirdNumber(int N, bool fromRtoL = true) //ищем третью цифру справа налево
+string FindThirdNumber(int N) //ищем третью цифру справа налево
 {
     string NumStr = Convert.ToString(Math.Abs(N));
     string result;
